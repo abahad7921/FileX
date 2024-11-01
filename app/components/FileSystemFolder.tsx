@@ -10,7 +10,7 @@ interface FileSystemFolderProps {
 const FileSystemFolder: React.FC<FileSystemFolderProps> = ({ folderName, onOpenModal, displaySupportedFileTypes }) => {
     const router = useRouter();
     const routeToDetails = () => {
-        router.push(`/details/${folderName}`);
+        router.push(`/details/${folderName.toLowerCase()}`);
     }
     return (
         <div className="card bg-base-100 w-96 shadow-xl">
